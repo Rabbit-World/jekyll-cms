@@ -1,0 +1,25 @@
+<header class="site-header">
+  <div class="container">
+    <div class="site-header-wrapper">
+      <div class="site-branding">
+        <a href="{{ '/' | relative_url }}" class="site-logo">
+          {% if site.logo %}
+          <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+          {% else %}
+          <h1 class="site-title">{{ site.title }}</h1>
+          {% endif %}
+        </a>
+        <p class="site-description">{{ site.description }}</p>
+      </div>
+      
+      <nav class="site-navigation" aria-label="Main Navigation">
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+          <span class="menu-toggle-text">Menu</span>
+          <span class="menu-toggle-icon"></span>
+        </button>
+        
+        {% include navigation.html %}
+      </nav>
+    </div>
+  </div>
+</header>

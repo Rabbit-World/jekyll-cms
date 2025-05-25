@@ -1,0 +1,56 @@
+# Site settings
+title: Jekyll GitHub Pages CMS
+description: A Jekyll-based CMS with GitHub Pages integration and Decap CMS
+url: "https://rabbit-world.github.io"
+baseurl: "/jekyll-cms"
+author: Rabbit Clown
+
+# Build settings
+markdown: kramdown
+theme: minima
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /blog/:year/:month/:day/:title/
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+
+# Pagination settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Additional configuration
+timezone: UTC
+encoding: utf-8

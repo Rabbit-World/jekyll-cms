@@ -1,0 +1,38 @@
+<div class="repository-browser">
+  <h3 class="browser-title">Repository Browser</h3>
+  
+  <div class="browser-controls">
+    <div class="browser-path">
+      <span class="current-path" id="repo-current-path">Loading...</span>
+    </div>
+    <div class="browser-actions">
+      <button id="repo-up-button" class="browser-button" disabled>Up</button>
+      <button id="repo-refresh-button" class="browser-button">Refresh</button>
+    </div>
+  </div>
+  
+  <div class="browser-content">
+    <ul id="repo-file-list" class="file-list">
+      <li class="loading-indicator">Loading repository contents...</li>
+    </ul>
+  </div>
+  
+  <div class="browser-footer">
+    <div class="repo-info">
+      <span id="repo-name">Repository: <span class="repo-name-value">username/username.github.io</span></span>
+      <span id="repo-branch">Branch: <span class="repo-branch-value">main</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- 
+  This is a placeholder for JavaScript integration.
+  The actual functionality will be implemented in assets/js/repository-browser.js
+  
+  Expected functionality:
+  - Fetch repository contents using GitHub API
+  - Navigate through directories
+  - Display files with appropriate icons
+  - Show file metadata (size, last modified)
+  - Link to GitHub for editing files
+-->

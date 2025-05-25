@@ -1,0 +1,22 @@
+<ul class="primary-menu">
+  <li class="menu-item {% if page.url == '/' %}active{% endif %}">
+    <a href="{{ '/' | relative_url }}">Home</a>
+  </li>
+  
+  <li class="menu-item {% if page.url contains '/blog/' %}active{% endif %}">
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
+  </li>
+  
+  {% assign sorted_pages = site.pages | sort: 'order' %}
+  {% for nav_page in sorted_pages %}
+    {% if nav_page.title and nav_page.navigation != false %}
+    <li class="menu-item {% if page.url == nav_page.url %}active{% endif %}">
+      <a href="{{ nav_page.url | relative_url }}">{{ nav_page.title }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+  
+  <li class="menu-item admin-link">
+    <a href="{{ '/admin/' | relative_url }}">Admin</a>
+  </li>
+</ul>

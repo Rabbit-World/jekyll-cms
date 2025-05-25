@@ -1,0 +1,47 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-widgets">
+      <div class="footer-widget">
+        <h3 class="widget-title">About</h3>
+        <p>{{ site.description }}</p>
+      </div>
+      
+      <div class="footer-widget">
+        <h3 class="widget-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/admin/' | relative_url }}">Admin</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-widget">
+        <h3 class="widget-title">Connect</h3>
+        <div class="social-links">
+          {% if site.github_username %}
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+          {% endif %}
+          
+          {% if site.twitter_username %}
+          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer">Twitter</a>
+          {% endif %}
+          
+          {% if site.linkedin_username %}
+          <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.
+      </div>
+      <div class="powered-by">
+        Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and 
+        <a href="https://decapcms.org/" target="_blank" rel="noopener noreferrer">Decap CMS</a>
+      </div>
+    </div>
+  </div>
+</footer>
